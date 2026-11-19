@@ -1,0 +1,26 @@
+{
+  "format": 1,
+  "inputs": [
+    { "atoms": [{ "element": "water", "pos": [0, 0] }] },
+    { "atoms": [{ "element": "air", "pos": [0, 0] }] }
+  ],
+  "product": {
+    "atoms": [
+      { "element": "water", "pos": [-3, 0] },
+      { "element": "air", "pos": [-2, 0] },
+      { "element": "water", "pos": [-1, 0] },
+      { "element": "air", "pos": [0, 0] },
+      { "element": "water", "pos": [1, 0] },
+      { "element": "air", "pos": [2, 0] }
+    ],
+    "bonds": [
+      { "from": [-3, 0], "to": [-2, 0] },
+      { "from": [-2, 0], "to": [-1, 0] },
+      { "from": [-1, 0], "to": [0, 0] },
+      { "from": [0, 0], "to": [1, 0] },
+      { "from": [1, 0], "to": [2, 0] }
+    ]
+  },
+  "scoring": { "metric": "area", "reference": 60 },
+  "test_products": 3
+}

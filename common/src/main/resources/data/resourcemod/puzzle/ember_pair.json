@@ -1,0 +1,15 @@
+{
+  "format": 1,
+  "inputs": [
+    { "atoms": [{ "element": "earth", "pos": [0, 0] }] },
+    { "atoms": [{ "element": "fire", "pos": [0, 0] }] }
+  ],
+  "product": {
+    "atoms": [
+      { "element": "earth", "pos": [0, 0] },
+      { "element": "fire", "pos": [1, 0] }
+    ],
+    "bonds": [{ "from": [0, 0], "to": [1, 0] }]
+  },
+  "scoring": { "metric": "cycles", "reference": 40 }
+}

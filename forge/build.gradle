@@ -1,0 +1,67 @@
+// forge: loader glue for Forge. The sources and resources of common are compiled into this module.
+// Checked: compiles and starts as a Forge 1.20.1 client (47.4.0). If the Gradle import fails on your machine,
+// set forge_enabled=false in gradle.properties and report the message.
+plugins {
+    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+}
+
+evaluationDependsOn(':common')
+
+base {
+    archivesName = "${mod_id}-forge-${minecraft_version}"
+}
+
+// Forge 1.20.1 runs on Java 17. Gradle fetches a JDK 17 by itself if none is installed (see settings.gradle.kts).
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+def commonMain = project(':common').sourceSets.main
+
+minecraft {
+    mappings channel: 'official', version: minecraft_version
+    copyIdeResources = true
+
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'info'
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+            }
+        }
+        client {
+            taskName 'ForgeClient'
+        }
+        server {
+            taskName 'ForgeServer'
+            workingDirectory project.file('run/server')
+            args '--nogui'
+        }
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    source(commonMain.allJava)
+}
+
+processResources {
+    from commonMain.resources
+    def props = [
+            mod_id: mod_id, mod_name: mod_name, mod_version: project.version,
+            mod_description: mod_description, mod_license: mod_license,
+            minecraft_version: minecraft_version
+    ]
+    inputs.properties props
+    filesMatching('META-INF/mods.toml') {
+        expand props
+    }
+}
+
+jar {
+    finalizedBy 'reobfJar'
+}

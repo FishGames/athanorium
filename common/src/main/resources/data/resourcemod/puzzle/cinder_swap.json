@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "inputs": [
+    {
+      "atoms": [
+        { "element": "fire", "pos": [0, 0] },
+        { "element": "earth", "pos": [1, 0] },
+        { "element": "fire", "pos": [2, 0] }
+      ],
+      "bonds": [
+        { "from": [0, 0], "to": [1, 0] },
+        { "from": [1, 0], "to": [2, 0] }
+      ]
+    },
+    { "atoms": [{ "element": "water", "pos": [0, 0] }] }
+  ],
+  "product": {
+    "atoms": [
+      { "element": "fire", "pos": [0, 0] },
+      { "element": "earth", "pos": [1, 0] },
+      { "element": "water", "pos": [2, 0] }
+    ],
+    "bonds": [
+      { "from": [0, 0], "to": [1, 0] },
+      { "from": [1, 0], "to": [2, 0] }
+    ]
+  },
+  "forbidden_parts": ["hex_arm"],
+  "scoring": { "metric": "part_value", "reference": 120 }
+}

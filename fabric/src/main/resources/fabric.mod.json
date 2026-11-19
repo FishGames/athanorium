@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "license": "${mod_license}",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["org.example.resourcemod.fabric.FabricEntry"],
+    "client": ["org.example.resourcemod.fabric.FabricClientEntry"]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "${minecraft_version}",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}

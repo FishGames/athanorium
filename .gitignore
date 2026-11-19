@@ -1,0 +1,45 @@
+# Compiled classes
+*.class
+
+# Logs and crash reports
+*.log
+logs/
+crash-reports/
+hs_err_pid*
+replay_pid*
+
+# Packages (the Gradle wrapper jar is kept)
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.rar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle
+.gradle/
+build/
+.kotlin/
+
+# Minecraft run folders (worlds, options, screenshots)
+run/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
