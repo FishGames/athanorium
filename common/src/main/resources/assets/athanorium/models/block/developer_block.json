@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "athanorium:block/developer_block_top",
+    "bottom": "athanorium:block/developer_block_bottom",
+    "front": "athanorium:block/developer_block_front",
+    "side": "athanorium:block/developer_block_side"
+  }
+}

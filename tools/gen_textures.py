@@ -10,7 +10,7 @@ import random
 from PIL import Image, ImageDraw
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "common", "src", "main", "resources",
-                    "assets", "resourcemod", "textures")
+                    "assets", "athanorium", "textures")
 BLOCK = os.path.join(ROOT, "block")
 GUI = os.path.join(ROOT, "gui", "puzzle")
 os.makedirs(BLOCK, exist_ok=True)

@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "resourcemod:block/developer_block" },
-    "facing=east": { "model": "resourcemod:block/developer_block", "y": 90 },
-    "facing=south": { "model": "resourcemod:block/developer_block", "y": 180 },
-    "facing=west": { "model": "resourcemod:block/developer_block", "y": 270 }
-  }
-}

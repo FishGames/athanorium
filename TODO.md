@@ -4,12 +4,11 @@ Placeholders and planned work. Everything listed here has to be done or delibera
 
 ## Placeholders
 
-- Mod id `resourcemod` and package `org.example.resourcemod`. Change in one pass before the first public release, data ids stay fixed afterwards. The id is read from `core/id/ModIds.java` and `gradle.properties`.
 - Mod name "Athanorium" is a working name.
 - License: `gradle.properties` says "All Rights Reserved", the GitHub repository was planned as MIT. Decide and make both match.
 - All GUI sprites and block textures are generated placeholders (`tools/gen_textures.py`). Replace them with hand drawn ones. Delete the script when the last sprite is replaced.
 - `core/score/YieldFormula.java` is a simple placeholder. Balancing comes later.
-- Part values in `data/resourcemod/part_value/` are first guesses.
+- Part values in `data/athanorium/part_value/` are first guesses.
 - Example puzzles have no reference solutions yet.
 
 ## Planned features
@@ -31,6 +30,5 @@ Placeholders and planned work. Everything listed here has to be done or delibera
 
 ## Release
 
-- Delete the leftover `src/main/java/org/example/Main.java` in the project root if it still exists.
 - Write the README, then rewrite it by hand so it reads like it was written by a person.
 - Update the planning documents, "Bonder" still appears there.

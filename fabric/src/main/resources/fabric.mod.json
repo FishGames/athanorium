@@ -7,8 +7,8 @@
   "license": "${mod_license}",
   "environment": "*",
   "entrypoints": {
-    "main": ["org.example.resourcemod.fabric.FabricEntry"],
-    "client": ["org.example.resourcemod.fabric.FabricClientEntry"]
+    "main": ["io.github.fishgames.athanorium.fabric.FabricEntry"],
+    "client": ["io.github.fishgames.athanorium.fabric.FabricClientEntry"]
   },
   "depends": {
     "fabricloader": ">=0.15.0",
